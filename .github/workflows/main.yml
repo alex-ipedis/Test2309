@@ -1,0 +1,3 @@
+POST https://axe-linter.deque.com/lint-source
+content-type: application/json
+authorization: LINTER_API_KEY
