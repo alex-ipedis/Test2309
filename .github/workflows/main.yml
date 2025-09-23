@@ -16,7 +16,7 @@ jobs:
         run: |
           curl --request POST --url https://axe-linter.deque.com/lint-source \
           --header 'content-type: application/json' \
-          --header "authorization: $LINTER_API_KEY" 
+          --header "authorization: ${{ secrets.LINTER_API_KEY }} 
           --data '{ "source": "# Heading\n### Another Heading\n",
             "filename": "file.md" }'
           }'
