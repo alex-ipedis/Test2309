@@ -1,3 +1,22 @@
-POST https://axe-linter.deque.com/lint-source
-content-type: application/json
-authorization: LINTER_API_KEY
+name: Linting and API Call
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint_and_send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Send POST request to Linter SaaS
+        run: |
+          curl --request POST --url https://axe-linter.deque.com/lint-source \
+          --header 'content-type: application/json' \
+          --header 'authorization: LINTER_API_KEY'
+          --data '{ "source": "# Heading\n### Another Heading\n",
+            "filename": "file.md" }'
+          }'
