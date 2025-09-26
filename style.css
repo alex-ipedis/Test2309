@@ -6,8 +6,7 @@ p {
 }
 table {
     border: #0f0d24 2px solid;
-    border-collapse: collapse;
-    width: 50%;
+    width: 30%;
 }
 li {
     list-style-type: square;
