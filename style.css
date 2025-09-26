@@ -4,6 +4,11 @@ h1 {
 p {
     color: #0f0d24;
 }
+table {
+    border: #0f0d24 2px solid;
+    border-collapse: collapse;
+    width: 50%;
+}
 li {
     list-style-type: square;
 }
