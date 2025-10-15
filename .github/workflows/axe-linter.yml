@@ -6,12 +6,12 @@ on: [pull_request]
 #     branches:
 #       - main
 
-rules:
-  image-alt:
-    enabled: true
-    severity: error
-  # label:
-  #   enabled: false
+# rules:
+#   image-alt:
+#     enabled: true
+#     severity: error
+#   # label:
+#   #   enabled: false
 
 jobs:
   build:
